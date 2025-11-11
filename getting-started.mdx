@@ -1,0 +1,112 @@
+---
+title: Getting Started
+description: Initial setup and onboarding process for new users on the Jaybird Farrow platform
+---
+
+## Account Creation
+
+You start your journey on Jaybird Farrow by registering an account tailored to land surveyors. The process verifies your professional credentials to ensure access to relevant content. Once registered, you receive a welcome email with links to introductory resources and community guidelines.
+
+<Columns cols={2}>
+  <Card title="Registration Steps" icon="user" href="#">
+    Follow simple prompts to input your details and set preferences.
+  </Card>
+  <Card title="Profile Customization" icon="settings" href="#">
+    Adjust learning paths based on your specialization in cadastral or topographic surveying.
+  </Card>
+</Columns>
+
+## Onboarding Process
+
+The onboarding module introduces the T.E.A.C.H and L.E.A.R.N frameworks through interactive videos and quizzes. You complete a self-assessment to identify knowledge gaps in areas like legal boundaries or GNSS technology. This sets the foundation for personalized learning recommendations.
+
+<Steps>
+  <Step title="Verify Email" icon="mail">
+    Click the verification link sent to your inbox. This activates full platform access within `<1 minute`.
+  </Step>
+  <Step title="Set Preferences" icon="sliders">
+    Select your region and experience level. Preferences influence module suggestions, such as focusing on U.S. PLSS standards.
+  </Step>
+  <Step title="Explore Dashboard" icon="layout">
+    Navigate the interface to find courses, forums, and progress trackers. Bookmark key sections for quick access.
+  </Step>
+  <Step title="Join Community" icon="users">
+    Participate in your first discussion thread on current surveying trends.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Enable two-factor authentication for added security when accessing sensitive project data.
+</Callout>
+
+## Dashboard Navigation
+
+Your dashboard centralizes all activities, displaying upcoming modules, community notifications, and certification progress. Use the search function to find specific topics like photogrammetry or hydrographic surveying. Customize widgets to prioritize content relevant to your daily workflows.
+
+<Tabs>
+  <Tab title="Desktop View" icon="monitor">
+    The full interface offers detailed analytics and multi-tab browsing for in-depth study sessions.
+    
+````bash
+    # Example: Installing required software for simulations
+    npm install --global surveyor-simulator
+    surveyor-simulator --init-project "my-survey"
+    cd my-survey && npm start
+````
+  </Tab>
+  <Tab title="Mobile Access" icon="phone">
+    The app supports offline downloads for fieldwork references, syncing progress upon reconnection.
+    
+````javascript
+    // Mobile API call example
+    async function fetchModules(userId) {
+      const response = await fetch(`/api/modules?user=${userId}`);
+      const modules = await response.json();
+      return modules.filter(m => m.level === 'beginner');
+    }
+    fetchModules('user123').then(modules => console.log(modules));
+````
+  </Tab>
+</Tabs>
+
+## First Module Completion
+
+Engage with the introductory course on basic measurement techniques. Complete hands-on exercises using virtual tools to simulate stakeout procedures. Submit quizzes to earn badges that contribute to your profile's credibility in community interactions.
+
+<ExpandableGroup>
+  <Expandable title="What if I encounter technical issues?" default-open="false">
+    Check the help center for troubleshooting guides. Contact support via the in-app chat for personalized assistance, available `24/7`.
+  </Expandable>
+  <Expandable title="How do I track progress?" default-open="true">
+    View the analytics tab for completion rates and time spent. Set milestones to align with professional development goals.
+  </Expandable>
+</ExpandableGroup>
+
+## Integrating with Tools
+
+Connect Jaybird Farrow to your existing software like AutoCAD or Trimble Business Center. Export learning certificates directly to your resume builder. Participate in virtual field trips to observe advanced surveying in action, enhancing your practical understanding.
+
+<CodeGroup tabs="Bash,Python">
+  ```bash
+  # Syncing data with external tools
+  git clone https://repo.surveytools.com/jaybird-integration.git
+  cd jaybird-integration
+  pip install -r requirements.txt
+  python sync.py --api-key YOUR_KEY --project "field-survey"
+  ```
+  ```python
+  import requests
+  
+  def sync_certificates(api_key, user_id):
+      headers = {'Authorization': f'Bearer {api_key}'}
+      response = requests.get(f'/api/certificates/{user_id}', headers=headers)
+      if response.status_code == 200:
+          return response.json()['certificates']
+      return []
+  
+  certs = sync_certificates('your_api_key', 'user123')
+  print(certs)
+  ```
+</CodeGroup>
+
+By following these steps, you quickly integrate Jaybird Farrow into your professional routine, leveraging the framework for sustained growth in land surveying.

@@ -1,0 +1,126 @@
+---
+title: T.E.A.C.H Overview
+description: Detailed explanation of the T.E.A.C.H framework components for land surveyor education
+---
+
+## Framework Introduction
+
+The T.E.A.C.H framework structures your learning in land surveying by emphasizing Theory, Engagement, Application, Collaboration, and Hands-on practice. You use this methodology to build a solid foundation in technical skills and professional ethics. It aligns with industry standards, preparing you for certifications like those from NSPS.
+
+<Columns cols={3}>
+  <Card title="Theory" icon="book" href="#">
+    Understand fundamental principles of geodesy and cartography.
+  </Card>
+  <Card title="Engagement" icon="message-circle" href="#">
+    Interact with dynamic content to reinforce concepts.
+  </Card>
+  <Card title="Application" icon="tool" href="#">
+    Apply knowledge to solve real surveying problems.
+  </Card>
+</Columns>
+
+## Theory Component
+
+You explore theoretical underpinnings through lectures and readings on topics like coordinate systems and error analysis. These sessions define key terms such as datum and projection on first use. Interactive diagrams illustrate concepts like the ellipsoidal model of the Earth.
+
+````mermaid
+graph TD
+    A[Theory Input] --> B[Geodesy Basics]
+    B --> C[Coordinate Systems]
+    C --> D[Error Propagation]
+    D --> E[Foundation Built]
+```
+
+<Callout kind="success">
+  Completing theory modules unlocks engagement activities automatically.
+</Callout>
+
+## Engagement Strategies
+
+Engage with multimedia resources including videos and podcasts featuring expert surveyors. You participate in polls and discussions to gauge understanding of topics like boundary law. This active involvement ensures retention rates `>80%` based on platform analytics.
+
+<Steps>
+  <Step title="Watch Video" icon="video">
+    Review a 10-minute clip on traverse adjustments.
+    
+````javascript
+    // Simulate engagement tracking
+    function trackView(videoId, duration) {
+      if (duration >= 600) { // 10 minutes in seconds
+        return 'Completed';
+      }
+      return 'In Progress';
+    }
+    console.log(trackView('traverse-101', 720)); // Outputs: Completed
+````
+  </Step>
+  <Step title="Join Discussion" icon="users">
+    Post questions about common pitfalls in leveling surveys.
+  </Step>
+  <Step title="Take Poll" icon="check-circle">
+    Vote on preferred tools for urban mapping.
+  </Step>
+</Steps>
+
+## Application in Practice
+
+Apply concepts through scenario-based exercises, such as designing a control network for a construction site. You receive feedback on submissions, iterating until accuracy meets `<=5 cm` tolerances. This bridges classroom knowledge to fieldwork demands.
+
+<Tabs>
+  <Tab title="Cadastral Survey" icon="map-pin">
+    Focus on legal descriptions and monumentation.
+    
+````python
+    # Example: Parcel area calculation
+    def calculate_area(coordinates):
+        n = len(coordinates)
+        area = 0.0
+        for i in range(n):
+            j = (i + 1) % n
+            area += coordinates[i][0] * coordinates[j][1]
+            area -= coordinates[j][0] * coordinates[i][1]
+        return abs(area) / 2.0
+    
+    parcel = [(0,0), (100,0), (100,50), (0,50)]
+    print(f"Area: {calculate_area(parcel)} sq units") # Outputs: Area: 2500.0 sq units
+````
+  </Tab>
+  <Tab title="Topographic Survey" icon="mountain">
+    Map elevations and features for engineering projects.
+  </Tab>
+</Tabs>
+
+<Expandable title="Collaboration Opportunities" default-open="true">
+  Collaborate via group projects simulating team surveys. Share GIS files and receive peer reviews on methodology.
+</Expandable>
+
+## Hands-on Activities
+
+Hands-on elements include virtual labs for total station simulations. You calibrate instruments and record measurements, analyzing data for discrepancies. Export results to formats compatible with field software, preparing you for actual deployments.
+
+<CodeGroup tabs="JavaScript,Bash">
+  ```javascript
+  // Virtual instrument calibration
+  class TotalStation {
+    constructor() {
+      this.angleError = 0.01; // degrees
+    }
+    measureAngle(azimuth) {
+      return azimuth + this.angleError;
+    }
+  }
+  const ts = new TotalStation();
+  console.log(ts.measureAngle(45)); // Approx 45.01
+  ```
+  ```bash
+  # Running a simulation script
+  ./simulate-survey.sh --instrument total-station --points 50 --output survey-data.csv
+  echo "Simulation complete. Data exported."
+  ```
+</CodeGroup>
+
+<Callout kind="alert">
+  Always cross-verify hands-on results with theoretical calculations to maintain accuracy.
+</Callout>
+
+The T.E.A.C.H framework equips you with comprehensive skills, fostering confidence in handling diverse surveying tasks from rural subdivisions to urban infrastructure projects.

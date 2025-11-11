@@ -1,0 +1,101 @@
+---
+title: Introduction
+description: Overview of Jaybird Farrow and its educational framework for land surveyors
+---
+
+## Overview
+
+Jaybird Farrow provides a comprehensive educational platform for land surveyors, integrating the T.E.A.C.H and L.E.A.R.N frameworks to create a continuous learning loop. You access structured courses, interactive modules, and community resources to enhance your professional skills. This approach ensures you stay updated with industry challenges and innovations.
+
+<Columns cols={3}>
+  <Card title="T.E.A.C.H Framework" icon="book-open" href="/docs/teach-overview">
+    Explore the foundational teaching methodology that builds core competencies in surveying techniques.
+  </Card>
+  <Card title="L.E.A.R.N Integration" icon="lightbulb" href="/docs/learn-methods">
+    Discover how learning loops connect theory to practical application in real-world scenarios.
+  </Card>
+  <Card title="Community Resources" icon="users" href="/docs/getting-started">
+    Join forums and access tools to collaborate with fellow surveyors worldwide.
+  </Card>
+</Columns>
+
+## Getting Started
+
+You begin by creating an account on the Jaybird Farrow platform, which grants immediate access to introductory modules. These modules cover basic surveying principles and introduce the integrated framework. Follow the guided onboarding process to set up your learning profile, including your experience level and areas of interest.
+
+<Steps>
+  <Step title="Sign Up" icon="user">
+    Visit the registration page and provide your professional details. Verify your email to activate your account.
+  </Step>
+  <Step title="Complete Profile" icon="settings">
+    Fill in your surveying background and select preferred learning paths. This personalizes your dashboard.
+  </Step>
+  <Step title="Start Learning" icon="play">
+    Dive into the first module on T.E.A.C.H basics. Track your progress with built-in analytics tools.
+  </Step>
+</Steps>
+
+<Callout kind="info">
+  Ensure your profile includes accurate certification details to unlock advanced content.
+</Callout>
+
+## Core Benefits
+
+The platform emphasizes practical skills through simulations and case studies drawn from real land surveying projects. You benefit from peer reviews and expert feedback in community sections. Regular updates incorporate the latest regulatory changes and technological advancements in geospatial tools.
+
+<Tabs>
+  <Tab title="Beginner" icon="star">
+    Focus on foundational concepts like boundary determination and equipment calibration.
+    
+````javascript
+    // Example: Basic coordinate calculation
+    function calculateDistance(pointA, pointB) {
+      const dx = pointB.x - pointA.x;
+      const dy = pointB.y - pointA.y;
+      return Math.sqrt(dx * dx + dy * dy);
+    }
+    const dist = calculateDistance({x: 0, y: 0}, {x: 3, y: 4});
+    console.log(`Distance: ${dist} units`); // Outputs: Distance: 5 units
+````
+  </Tab>
+  <Tab title="Advanced" icon="zap">
+    Tackle complex topics such as GIS integration and drone surveying workflows. Use advanced simulations for topographic mapping.
+  </Tab>
+</Tabs>
+
+<Expandable title="What Makes Jaybird Farrow Unique?" default-open="false">
+  The integration of T.E.A.C.H (Theory, Engagement, Application, Collaboration, Hands-on) with L.E.A.R.N (Listen, Engage, Apply, Reflect, Network) forms a seamless loop. You progress from theoretical knowledge to practical networking, ensuring lifelong learning. This methodology addresses modern challenges like urban development and environmental surveying.
+</Expandable>
+
+## Integration with Professional Practice
+
+You apply learned concepts directly in your fieldwork using the platform's mobile app for on-site references. Download templates for survey reports and share findings in real-time with teams. The framework supports certification renewals by tracking continuing education credits automatically.
+
+<CodeGroup tabs="Python,JavaScript">
+  ```python
+import math
+
+def calculate_bearing(start, end):
+    dx = end[0] - start[0]
+    dy = end[1] - start[1]
+    bearing = math.degrees(math.atan2(dy, dx))
+    return bearing % 360
+
+start = (100, 200)
+end = (150, 250)
+print(f"Bearing: {calculate_bearing(start, end):.2f} degrees")
+```
+  ```javascript
+function calculateBearing(start, end) {
+  const dx = end.x - start.x;
+  const dy = end.y - start.y;
+  let bearing = Math.atan2(dy, dx) * (180 / Math.PI);
+  return (bearing + 360) % 360;
+}
+const start = {x: 100, y: 200};
+const end = {x: 150, y: 250};
+console.log(`Bearing: ${calculateBearing(start, end).toFixed(2)} degrees`);
+```
+</CodeGroup>
+
+Through this platform, you transform challenges into opportunities, fostering a resilient surveying community. The continuous loop ensures you remain at the forefront of the profession.
